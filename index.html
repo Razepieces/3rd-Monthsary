@@ -262,33 +262,3 @@
 
         <!-- Section 11: Virtual Hug Counter -->
         <div class="activity">
-            <h2>🤗 Virtual Hugs</h2>
-            <p>Click for a hug! Let's see how many we can collect.</p>
-            <button onclick="addHug()">🤗 Give a Hug</button>
-            <p>Hugs given: <span id="hugCount">0</span></p>
-        </div>
-
-        <!-- Secret Message (Unlocks after 10 interactions) -->
-        <div id="secret" class="hidden">
-            <h2>🔒 Secret Surprise!</h2>
-            <p>You've unlocked a secret: I love you to the moon and back, and beyond. You're my everything! 🎉</p>
-        </div>
-    </div>
-
-    <script>
-        let progress = 0;
-        let interactions = 0;
-        let photoIndex = 0;
-        const photos = document.querySelectorAll('.slideshow img');
-        let musicPlaying = false;
-        const audio = new Audio('https://www.soundjay.com/misc/sounds/bell-ringing-05.wav'); // Placeholder; replace with a sweet song URL like a romantic instrumental
-
-        function revealMessage(id) {
-            const msg = document.getElementById('message' + id);
-            msg.classList.toggle('hidden');
-            if (!msg.classList.contains('hidden')) {
-                updateProgress();
-                // Confetti effect
-                for (let i = 0; i < 50; i++) {
-                    const confetti = document.createElement('div');
-                    confetti.style.position = 'absolute';
